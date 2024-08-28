@@ -19,7 +19,8 @@ router.route("/").get(async (req, res) => {
     const posts = await Post.find({});
     res.status(200).json({ status: "success", data: posts });
   } catch (err) {
-    res.status(500).json({ status: "fail", message: err });
+    console.log(err);
+    res.status(500).json({ status: "fail", message: err.message });
   }
 });
 // Create Posts

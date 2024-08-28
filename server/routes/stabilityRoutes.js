@@ -34,7 +34,7 @@ router.route("/generate-image").post(async (req, res) => {
     res.json({ image: response.data.artifacts[0].base64 });
   } catch (error) {
     console.error("Error generating image:", error);
-    res.status(500).json({ error: "Failed to generate image" });
+    res.status(500).json({ error: "Failed to generate image", error });
   }
 });
 export default router;

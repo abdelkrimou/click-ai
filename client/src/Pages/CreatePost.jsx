@@ -50,6 +50,9 @@ function CreatePost() {
           photo: `data:image/png;base64,${response.data.image}`,
         });
       } catch (error) {
+        toast.error(
+          "There was an issue with generating the image, Please try later again !"
+        );
         console.error("Error generating image:", error);
       } finally {
         setGeneratingImg(false);
