@@ -4,6 +4,7 @@ import FormField from "../components/FormField";
 import Loader from "../components/Loader";
 import Card from "../components/Card";
 import axios from "axios";
+import toast from "react-hot-toast";
 function Home() {
   const [loading, setLoading] = useState(false);
   const [allPosts, setAllPosts] = useState(null);
@@ -23,8 +24,8 @@ function Home() {
           setAllPosts(response.data.data.reverse());
         }
       } catch (err) {
-        alert(err.message);
         console.log(err);
+        toast.error("There was an issue with uploading posts");
       } finally {
         setLoading(false);
       }

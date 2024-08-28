@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Loader from "../components/Loader";
-//import { preview } from "../assets";
 import { FaImages } from "react-icons/fa";
 import { getRandomPrompt } from "../utils";
 import { useState } from "react";

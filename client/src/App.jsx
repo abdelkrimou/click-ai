@@ -1,11 +1,4 @@
-/* eslint-disable no-unused-vars */
-import {
-  BrowserRouter,
-  Link,
-  Route,
-  Routes,
-  useNavigate,
-} from "react-router-dom";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import Home from "./Pages/Home";
 import CreatePost from "./Pages/CreatePost";
