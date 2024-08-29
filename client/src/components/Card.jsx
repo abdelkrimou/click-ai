@@ -16,13 +16,12 @@ function Card({ _id, name, photo, prompt, likes }) {
         url: `${import.meta.env.VITE_DEVELOPEMENT_SERVER}/api/v1/post/${_id}`,
         Headers: { "Content-Type": "application/json" },
       });
-      console.log(response);
       setLikeCount(response.data.data.likes);
       toast.success("Liked ♥");
     } catch (err) {
       console.log("Error liking the post:", err);
       setIsLiked((prev) => !prev);
-      toast.error("Please try again !");
+      toast.error("Please try again later!");
     }
   }
   return (

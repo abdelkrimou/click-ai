@@ -6,7 +6,6 @@ import DarkModeToggle from "./DarkModeToggle";
 function NavBtn() {
   const location = useLocation();
   const isCreatePage = location.pathname === "/create-post";
-  console.log(isCreatePage);
   return (
     <>
       <div

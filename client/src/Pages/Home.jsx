@@ -14,8 +14,6 @@ function Home() {
   const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
-    const serverurl = import.meta.env.VITE_DEVELOPEMENT_SERVER;
-    console.log(serverurl);
     const fetchPosts = async () => {
       setLoading(true);
       try {
