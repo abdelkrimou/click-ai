@@ -106,7 +106,7 @@ function Home() {
           </>
         )}
       </div>
-      <div className="m-auto mt-16 w-[30px] h-[30px] flex justify-center items-center  cursor-pointer  dark:text-white dark:border-white border-black border rounded-full animate-ping">
+      <div className="m-auto hidden mt-16 w-[30px] h-[30px]  justify-center items-center  cursor-pointer  dark:text-white dark:border-white border-black border rounded-full animate-ping">
         <MdKeyboardDoubleArrowDown />
       </div>
     </section>
