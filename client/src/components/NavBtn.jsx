@@ -8,26 +8,29 @@ function NavBtn() {
   const isCreatePage = location.pathname === "/create-post";
   console.log(isCreatePage);
   return (
-    <div className="flex gap-2">
+    <>
       <div
         to="/create-post"
-        className="font-inter tracking-wide text-md font-light text-[16px] bg-[#6469ff] hover:bg-[#585efc] text-white rounded-md "
+        className="font-inter sm:ml-auto sm:w-fit w-full  items-center order-3 tracking-wide text-md font-light text-[16px] bg-[#6469ff] hover:bg-[#585efc] text-white rounded-md "
       >
         {!isCreatePage ? (
           <Link
             to="/create-post"
-            className=" flex items-center gap-2  px-4 py-2"
+            className=" flex items-center  sm:justify-start justify-center gap-3 sm:px-5 p-3"
           >
             <FaPlus className="inline-block" /> Create
           </Link>
         ) : (
-          <Link to="/" className=" flex items-center gap-3 px-4 py-2">
+          <Link
+            to="/"
+            className=" flex items-center min-w-[200px] gap-3 justify-center p-3"
+          >
             <GrGallery className="inline-block" /> Browse Gallery
           </Link>
         )}
       </div>
       <DarkModeToggle />
-    </div>
+    </>
   );
 }
 

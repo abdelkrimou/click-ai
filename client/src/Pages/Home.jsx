@@ -4,9 +4,11 @@ import FormField from "../components/FormField";
 import Loader from "../components/Loader";
 import Card from "../components/Card";
 import axios from "axios";
+import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import toast from "react-hot-toast";
 function Home() {
   const [loading, setLoading] = useState(false);
+  // const [page, setPage] = useState(1);
   const [allPosts, setAllPosts] = useState(null);
   const [searchedResults, setSearchedResults] = useState(null);
   const [searchText, setSearchText] = useState("");
@@ -103,6 +105,9 @@ function Home() {
             </div>
           </>
         )}
+      </div>
+      <div className="m-auto mt-16 w-[30px] h-[30px] flex justify-center items-center  cursor-pointer  dark:text-white dark:border-white border-black border rounded-full animate-ping">
+        <MdKeyboardDoubleArrowDown />
       </div>
     </section>
   );

@@ -29,7 +29,7 @@ const DarkModeToggle = () => {
   return (
     <button
       onClick={toggleDarkMode}
-      className="px-3 py-2 bg-gray-200 dark:border-white border-black border dark:text-white dark:bg-gray-500 rounded-md"
+      className="p-3 sm:order-3 order-2 bg-gray-200 dark:border-white border-black border dark:text-white dark:bg-gray-500 rounded-md"
     >
       {isDarkMode ? <MdDarkMode /> : <MdLightMode />}
     </button>
